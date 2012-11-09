@@ -6,46 +6,37 @@ public class TableCell
 	private String bgCol;
 
 	
-	public TableCell()
-	{
+	public TableCell() {
 		bgCol = "";
 	}
 	
-	public TableCell(String txt)
-	{
+	public TableCell(String txt) {
 		text = txt;
 		bgCol = "";
 	}
 	
-	public void setText(String txt)
-	{
+	public void setText(String txt) {
 		text = txt;
 	}
 	
-	public void setBgCol(String col)
-	{
+	public void setBgCol(String col) {
 		bgCol = col;
 	}
 	
-	public String getText()
-	{
+	public String getText() {
 		return text;
 	}
 	
-	public boolean hasBgCol()
-	{
-		if(bgCol != "")
-		{
+	public boolean hasBgCol() {
+		if(bgCol != "") {
 			return true;
 		}
-		else
-		{
+		else {
 			return false;
 		}
 	}
 	
-	public String getBgCol()
-	{
+	public String getBgCol() {
 		return bgCol;
 	}			
 }
