@@ -20,8 +20,7 @@ public class CalendarEvent
 	private HashMap<String, String> colors = new HashMap<>();
 	
 	
-	public CalendarEvent()
-	{
+	public CalendarEvent() {
 		snc.put("DPL", "Jocelyn");
 		snc.put("PAS", "Jocelyn");
 		snc.put("MRQ", "Leah");
@@ -43,86 +42,69 @@ public class CalendarEvent
                 colors.put("HVT", "LightGrey");
 	}
 	
-	public String getEventDay()
-	{	
+	public String getEventDay() {	
 			return eventDay;
 	}
 	
-	public Date getStartTime()
-	{
+	public Date getStartTime() {
 		return startTime;
 	}
 	
-	public Date getEndTime()
-	{
+	public Date getEndTime() {
 		return endTime;
 	}
 	
-	public String getStudy()
-	{
+	public String getStudy() {
 		return studyName;
 	}
 	
-	public String getContact()
-	{
-		if(eventContact.equals(null))
-		{
+	public String getContact() {
+		if(eventContact.equals(null)) {
 			String contact = snc.get(studyName);
-			if(contact.equals(null))
-			{
+			if(contact.equals(null)) {
 				return "";
 			}
-			else
-			{
+			else {
 				return contact;
 			}
 		}
-		else
-		{
+		else {
 			return eventContact;
 		}
 	}
 	
-	public void setEventDay(String dey)
-	{
+	public void setEventDay(String dey) {
 		eventDay = dey;
 	}
 	
-	public void setStartTime(Date start)
-	{
+	public void setStartTime(Date start) {
 		startTime = start;
 	}
 	
-	public void setEndTime(Date end)
-	{
+	public void setEndTime(Date end) {
 		endTime = end;
 	}
 	
-	public void setStudyName(String stud)
-	{
+	public void setStudyName(String stud) {
 		studyName = stud;
 	}
 	
-	public void setEventContact(String cont)
-	{
+	public void setEventContact(String cont) {
 		eventContact = cont;
 	}
 	
-	public void setEventContact()
-	{
+	public void setEventContact() {
 		eventContact = snc.get(studyName);
 	}
 	
-	public TableRow toRow()
-	{
+	public TableRow toRow() {
 		TableRow row = new TableRow();
 	
 		TableCell day = new TableCell(eventDay);
 		TableCell date = new TableCell();
 		TableCell time = new TableCell();
 		TableCell study = new TableCell(studyName);
-		if(colors.containsKey(studyName))
-		{
+		if(colors.containsKey(studyName)) {
 			study.setBgCol(colors.get(studyName));
 		}
 		TableCell contact = new TableCell(eventContact);
