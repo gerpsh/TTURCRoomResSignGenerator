@@ -185,8 +185,7 @@ public class MainFrame extends javax.swing.JFrame {
 		CalendarEvent[] fourEvents = fourMaker.compileList("https://www.google.com/calendar/feeds/itmqe3hm6cnodv7tr8d0mp2buc@group.calendar.google.com/private-41dcfcea52c60edebaccdb8145ea4c09/full" + caboose);
 		
 		RoomResTable oneTable = new RoomResTable("4019 Room Reservation Calendar");
-		for(CalendarEvent event : oneEvents)
-		{
+		for(CalendarEvent event : oneEvents) {
 			TableRow row = event.toRow();
 			oneTable.addRow(row);
 		}
@@ -194,8 +193,7 @@ public class MainFrame extends javax.swing.JFrame {
 		oneTable.toHtml("S:\\Across_Studies\\Procedures\\Room Reservation Scheduling\\4019RoomReservationCalendar.html");
 		
 		RoomResTable twoTable = new RoomResTable("4103b Room Reservation Calendar");
-		for(CalendarEvent event : twoEvents)
-		{
+		for(CalendarEvent event : twoEvents) {
 			TableRow row = event.toRow();
 			twoTable.addRow(row);
 		}
@@ -203,8 +201,7 @@ public class MainFrame extends javax.swing.JFrame {
 		twoTable.toHtml("S:\\Across_Studies\\Procedures\\Room Reservation Scheduling\\4103bRoomReservationCalendar.html");
 		
 		RoomResTable threeTable = new RoomResTable("4018 Room Reservation Calendar");
-		for(CalendarEvent event : threeEvents)
-		{
+		for(CalendarEvent event : threeEvents) {
 			TableRow row = event.toRow();
 			threeTable.addRow(row);
 		}
@@ -212,8 +209,7 @@ public class MainFrame extends javax.swing.JFrame {
 		threeTable.toHtml("S:\\Across_Studies\\Procedures\\Room Reservation Scheduling\\4018RoomReservationCalendar.html");
 		
 		RoomResTable fourTable = new RoomResTable("4016 Room Reservation Calendar");
-		for(CalendarEvent event : fourEvents)
-		{
+		for(CalendarEvent event : fourEvents) {
 			TableRow row = event.toRow();
 			fourTable.addRow(row);
 		}
@@ -228,10 +224,8 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
     }
-    public String endOfWeek(String beginString)
-    {
-	try
-	{
+    public String endOfWeek(String beginString) {
+	try {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 		Date beginDate = formatter.parse(beginString);
 		Calendar cal = Calendar.getInstance();
@@ -240,8 +234,7 @@ public class MainFrame extends javax.swing.JFrame {
 		String endString = formatter.format(cal.getTime());
 		return endString;
 	}
-	catch(Exception e)
-	{
+	catch(Exception e) {
 		exLabel.setVisible(true);
 		return "";
 	}
