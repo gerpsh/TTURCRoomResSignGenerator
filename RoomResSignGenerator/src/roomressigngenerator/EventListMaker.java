@@ -1,4 +1,3 @@
-
 package roomressigngenerator;
 
 import java.io.BufferedReader;
@@ -23,8 +22,8 @@ public class EventListMaker
 		StringBuffer str = new StringBuffer();
 		String line = in.readLine();
 		while(line != null) {
-			str.append(line);
-			str.append("\n");
+			str.append(line + "\n");
+			//str.append("\n");
 			line = in.readLine();
 		}
 		
@@ -109,12 +108,10 @@ public class EventListMaker
 				else if(eventDatum.startsWith("start:")) {
 					eventDatum = eventDatum.replace("start:", "");
 					eventDatum = eventDatum.replace(".000-4:00", "");
-					System.out.println(eventDatum);
 				}
 				else if(eventDatum.startsWith("end:")) {
 					eventDatum = eventDatum.replace("end:", "");
-					eventDatum = eventDatum.replace(".000-4:00", "");
-					System.out.println(eventDatum);		
+					eventDatum = eventDatum.replace(".000-4:00", "");		
 				}
 			}
 		}	
